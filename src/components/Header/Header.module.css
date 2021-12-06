@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+li, a, button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: cornsilk;
+    text-decoration: none;
+
+}
+
+header {
+    background-color:  #960B81;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+
+}
+
+.logo {
+    cursor: pointer;
+    font-family: Pacifico;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    color: rgb(39, 4, 46);
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+    color: rgb(39, 4, 46);
+}
+
+button {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    background-color: #dd4dc8;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: #db7fcd;
+    color: rgb(41, 5, 48);
+    
+
+}
+

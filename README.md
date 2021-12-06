@@ -72,3 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### HTML and CSS
+
+## NavBar - https://www.youtube.com/watch?v=PwWHL3RyQgk
+## React Card Component - https://www.youtube.com/watch?v=Q3I_NwaCZI8
