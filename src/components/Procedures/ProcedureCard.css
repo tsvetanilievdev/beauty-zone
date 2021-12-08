@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(236, 195, 218);
+}
 .card-container {
     width: 300px;
     overflow: hidden;
@@ -7,6 +10,8 @@
     display: inline-block;
     height: 400px;
     padding: auto;
+
+    margin: 10px;
 }
 
 .card-container:hover {
@@ -33,4 +38,6 @@ h3, p {
 .card-btn{
     display: flex;
     justify-content: center;
+    margin: auto;
 }
+

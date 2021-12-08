@@ -10,7 +10,7 @@ export const ProcedureCard = ({ procedure }) => {
           <h3> {procedure.name}</h3>
         </div>
         <div className="card-body">
-          <p>{procedure.description}</p>
+          <p>{procedure.type}</p>
         </div>
       </div>
 

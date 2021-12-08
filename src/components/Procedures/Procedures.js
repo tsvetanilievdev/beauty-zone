@@ -1,3 +1,4 @@
+import './Procedures.css';
 import { ProcedureCard } from "./ProcedureCard.js";
 
 export const Procedures = () => {
@@ -109,10 +110,27 @@ export const Procedures = () => {
       _createdOn: 1617799822344,
       id: 10,
     },
+    {
+      _ownerId: '35c62d76-8152-4626-8712-eeb96381bea8',
+      name: 'Wish Pro',
+      price: 14,
+      description:
+        'Wish Pro - елексир на младостта.',
+      imageUrl: '/images/cavitaciq.jpg',
+      type: 'Лице',
+      _createdOn: 1617799822344,
+      id: 11,
+    },
   ];
-console.log(data.forEach(x => x._id));
+
   return( 
     <>
-      {Object.values(data).map(x => <ProcedureCard procedure={x} key={x.id}/>)}
+      <section className="search-item">
+        <input type="text" placeholder="Search...." />
+        <button>Search</button>
+      </section>
+      <section className="all-cards-section">
+        {Object.values(data.splice(0,5)).map(x => <ProcedureCard procedure={x} key={x.id}/>)}
+      </section>
     </>);
 };
