@@ -1,5 +1,9 @@
 import './ProcedureCard.css';
+import { Link, NavLink } from 'react-router-dom';
+
+
 export const ProcedureCard = ({ procedure }) => {
+  console.log(procedure);
   return (
     <div className="card-container">
       <div className="image-container">
@@ -15,8 +19,9 @@ export const ProcedureCard = ({ procedure }) => {
       </div>
 
       <button className="card-btn">
-        <a href="#">More..</a>
+        <Link to={`${procedure.id}`}>More..</Link>
       </button>
+
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { Register } from './components/Register/Register.js';
 import { Home } from './components/Home/Home.js';
 import { Route, Routes } from 'react-router';
 import { Procedures } from './components/Procedures/Procedures.js';
+import { ProcedureDetails } from './components/Procedures/ProcedureDetails.js';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/home" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
-        <Route path="/procedures" element={<Procedures />}/>
+        <Route path="/procedures" exact element={<Procedures />} />
+        <Route path="/procedures/:procedureId" element={<ProcedureDetails/>}/>  
       </Routes>
     </div>
   );
