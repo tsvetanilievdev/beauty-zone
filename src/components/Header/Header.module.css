@@ -25,6 +25,7 @@ header {
 }
 
 .logo:hover {
+    transform: scale(1.2);
     color: rgb(39, 4, 46);
 }
 

@@ -6,6 +6,10 @@ import { Home } from './components/Home/Home.js';
 import { Route, Routes } from 'react-router';
 import { Procedures } from './components/Procedures/Procedures.js';
 import { ProcedureDetails } from './components/Procedures/ProcedureDetails.js';
+import requester from './services/requester.js';
+
+
+window.api = requester;
 
 function App() {
   return (

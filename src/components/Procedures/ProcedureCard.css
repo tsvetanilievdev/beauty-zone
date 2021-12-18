@@ -33,11 +33,20 @@ h3, p {
 }
 .card-title {
     margin-bottom: 00.5rem;
+    font-size: 1.3rem;
 }
 
 .card-btn{
     display: flex;
     justify-content: center;
     margin: auto;
+}
+
+.card-body {
+    font-weight: bold;
+}
+
+.card-description {
+    padding-top: 20px;
 }
 

@@ -3,7 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 export const ProcedureCard = ({ procedure }) => {
-  console.log(procedure);
+  let previewDescription = procedure.description;
+
   return (
     <div className="card-container">
       <div className="image-container">
@@ -16,10 +17,13 @@ export const ProcedureCard = ({ procedure }) => {
         <div className="card-body">
           <p>{procedure.type}</p>
         </div>
+        <div className='card-description'>
+          <p>{previewDescription.slice(0,33) + '....'}</p>
+        </div>
       </div>
 
       <button className="card-btn">
-        <Link to={`${procedure.id}`}>More..</Link>
+        <Link to={`${procedure._id}`}>More..</Link>
       </button>
 
     </div>
