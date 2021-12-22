@@ -1,7 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 import styles from './Header.module.css'
 
 const navigationGuest = (
+
+  
   <>
     <li>
       <NavLink to="/login">Login</NavLink>
@@ -15,21 +19,20 @@ const navigationGuest = (
 const navigationUser = (
   <>
     <li>
-      <NavLink to="#">Book an hour</NavLink>
+      <NavLink to="/booking">Book an hour</NavLink>
     </li>
     <li>
       <NavLink to="#">Contact Us</NavLink>
     </li>
     <li>
-      <NavLink to="#">Logout</NavLink>
+      <NavLink to="/logout">Logout</NavLink>
     </li>
   </>
 
 )
 
-export const Header = ({
-  email
-}) => {
+export const Header = () => {
+  const {user} = useContext(AuthContext);
   return (
     <header>
       <NavLink className={styles.logo} to="/home">Beauty SoftUni</NavLink>
@@ -38,12 +41,12 @@ export const Header = ({
           <li>
             <NavLink to="/procedures">Procedures</NavLink>
           </li>
-          {email
+          {user.email
             ? navigationUser
             : navigationGuest}
         </ul>
       </nav>
-      {email
+      {user.email
         ? (<a className={styles.cta} to="javascript:void(0)">
           <button>My profile</button>
         </a>)
