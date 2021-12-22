@@ -34,7 +34,7 @@ export const Procedures = () => {
       </form>
       <section className="all-cards-section">
         {data.map((x) => (
-          <ProcedureCard procedure={x} key={x.id} />
+          <ProcedureCard procedure={x} key={x._id} />
         ))}
       </section>
     </>
