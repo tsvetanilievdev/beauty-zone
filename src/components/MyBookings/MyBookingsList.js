@@ -26,7 +26,6 @@ const ListItem = (
 export const MyBookings = () => {
     const [myBookings, setMyBookings] = useState([]);
     const {user} = useContext(AuthContext);
-    console.log(user)
 
     useEffect(() => {
 

@@ -49,9 +49,8 @@ function App() {
           {/* // to dooooo.. */}
           <Route path="/logout" element={<Logout />} />
           <Route path="/my-bookings" element={<MyBookings />} />
-          <Route path="/my-bookings/:id" element={<ProcedureDetails />} />
+          <Route path="/edit/:id" element={<ProcedureDetails />} />
           <Route path="/become-a-member" element={<ProcedureDetails />} />
-          <Route path="/contact" element={<ProcedureDetails />} />
         </Routes>
       </div>
     </AuthContext.Provider>
