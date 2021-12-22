@@ -1,8 +1,13 @@
 import styles from './Login.module.css'
 import { login } from '../../services/beautyZoneService.js'
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
+
 
 export const Login = () => {
+const {onLogin} = useContext(AuthContext);
+
   const navigation = useNavigate();
 
   async function onSubmit(e) {
@@ -16,7 +21,8 @@ export const Login = () => {
       return alert('The passwords must be the same!');
     }
 
-    await login(email, password);
+    let result = await login(email, password);
+    onLogin(result);
     navigation('/');
   }
   return (
