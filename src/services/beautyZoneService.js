@@ -5,6 +5,7 @@ const endpoints = {
     getAllProcedures: '/data/procedures',
     createBooking: '/data/bookings',
     editBooking: (id) => `/data/bookings/${id}`,
+    getOneById: (id) => `/data/bookings/${id}`,
     getMyBooking: (userId) => `/data/bookings?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`,
 }
 
@@ -13,6 +14,10 @@ export async function getAll(){
     return Object.values(result);
 }
 
+export async function getOneById(id){
+    const result = await request.get(endpoints.getOneById(id));
+    return result;
+}
 export async function createUserBooking(data){
     const result = await request.post(endpoints.createBooking, data);
     return result;
@@ -24,7 +29,6 @@ export async function getMyBooking(userId){
 }
 
 export async function editUserBooking(id, data){
-
     const result = await request.put(endpoints.editBooking(id), data);
     return result;
 }
@@ -40,5 +44,6 @@ export default {
     getAll,
     createUserBooking,
     getMyBooking,
-    editUserBooking
+    editUserBooking,
+    getOneById
 }

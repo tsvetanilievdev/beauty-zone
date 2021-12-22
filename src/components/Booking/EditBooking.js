@@ -1,29 +1,52 @@
-import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { editUserBooking, getOneById } from '../../services/beautyZoneService';
 import styles from './EditBooking.module.css'
 
 export const EditBooking = () => {
+    const [currBooking, setCurrBooking] = useState();
     const todayString = new Date().toISOString().slice(0,10);
     const {id} = useParams();
+    const navigate = useNavigate();
     
     //get one buy id, pass to form
-
+    getOneById(id).then(res => setCurrBooking(res));
     //onSubmit edit 
 
+    async function onSubmit(e) {
+        e.preventDefault();
+
+        const formData = new FormData(e.currentTarget);
+        const type = formData.get('select-type');
+        const name = formData.get('select-procedure');
+        const date = formData.get('date');
+        const hour = formData.get('timeStart');
+
+        await editUserBooking(id, {type, name, date, hour});
+        navigate('/my-bookings');
+    }
+
     return (
-        <form  action="">
+        <form onSubmit={onSubmit} action="">
         <div className={styles.wrapper}>
             <h3>Edit my date or hour</h3>
             <div className={styles['wrap-div'] + " select"}>
                 <label htmlFor="type">Select type: </label>
                 <select name="select-type">
-                    
+                    {currBooking != null
+                        ? <option key={currBooking._id} value={currBooking.type}>{currBooking.type}</option>
+                        : null
+                    }
                 </select>
             </div>
 
             <div className={styles['wrap-div'] + " select"}>
                 <label htmlFor="procedure">Select Procedure: </label>
                 <select name="select-procedure">
-                    
+                {currBooking != null
+                        ? <option key={currBooking._id} value={currBooking.name}>{currBooking.name}</option>
+                        : null
+                    }
                 </select>
             </div>
             <div className={styles['wrap-div']}>
