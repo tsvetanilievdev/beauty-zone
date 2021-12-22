@@ -1,3 +1,3 @@
-import { useContext } from "react";
-const AuthContext = useContext();
-export default AuthContext;
+import { createContext } from "react";
+
+export const AuthContext = createContext();
