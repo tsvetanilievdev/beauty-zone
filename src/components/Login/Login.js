@@ -6,8 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 
 
 export const Login = () => {
-const {onLogin} = useContext(AuthContext);
-
+  const { onAuth } = useContext(AuthContext);
   const navigation = useNavigate();
 
   async function onSubmit(e) {
@@ -18,15 +17,15 @@ const {onLogin} = useContext(AuthContext);
     const password = formData.get('password');
 
     if (email.trim() == '' || password == '') {
-      return alert('The passwords must be the same!');
+      return alert('All fields must be completed!');
     }
 
-    
+
     try {
       let result = await login(email, password);
-      onLogin(result);
+      onAuth(result);
       navigation('/');
-      
+
     } catch (err) {
       return alert(err.message);
     }
