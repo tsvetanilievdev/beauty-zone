@@ -5,7 +5,7 @@ import styles from './Header.module.css'
 
 const navigationGuest = (
 
-  
+
   <>
     <li>
       <NavLink to="/login">Login</NavLink>
@@ -32,7 +32,7 @@ const navigationUser = (
 )
 
 export const Header = () => {
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   return (
     <header>
       <NavLink className={styles.logo} to="/home">Beauty SoftUni</NavLink>
@@ -47,12 +47,19 @@ export const Header = () => {
         </ul>
       </nav>
       {user.email
-        ? (<a className={styles.cta} to="javascript:void(0)">
-          <button>My profile</button>
-        </a>)
-        : (<a className={styles.cta} to="/become-a-member">
-        <button>Become a member!</button>
-      </a>)
+        ? (
+          <ul className={styles['nav__links']}>
+            <li>
+              <NavLink to="/my-bookings">My Bookings</NavLink>
+            </li>
+          </ul>
+        )
+        : (
+          <ul className={styles['nav__links']}>
+            <li>
+              <NavLink to="/become-a-member">Become a member!</NavLink>
+            </li>
+          </ul>)
       }
 
     </header>
