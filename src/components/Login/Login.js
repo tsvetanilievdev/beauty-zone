@@ -2,7 +2,8 @@ import styles from './Login.module.css'
 
 export const Login = () => {
   return (
-
+    <div className='login-wrapper'>
+      
     <form action="">
       <div className={styles.wrapper}>
           <h3>Login form</h3>
@@ -17,5 +18,6 @@ export const Login = () => {
         <button>Submit</button>
       </div>
     </form>
+    </div>
   );
 };

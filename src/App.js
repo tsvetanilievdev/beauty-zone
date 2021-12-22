@@ -13,7 +13,7 @@ window.api = requester;
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg">
       <Header />
       <Routes>
         <Route path="/" element={<Home />}/>
