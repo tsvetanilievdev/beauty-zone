@@ -1,6 +1,6 @@
 import './App.css';
 
-import requester from './services/requester.js';
+import requester from './services/beautyZoneService';
 
 import { Route, Routes } from 'react-router';
 import { AuthContext } from './contexts/AuthContext.js'
