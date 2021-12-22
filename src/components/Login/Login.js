@@ -21,9 +21,15 @@ const {onLogin} = useContext(AuthContext);
       return alert('The passwords must be the same!');
     }
 
-    let result = await login(email, password);
-    onLogin(result);
-    navigation('/');
+    
+    try {
+      let result = await login(email, password);
+      onLogin(result);
+      navigation('/');
+      
+    } catch (err) {
+      return alert(err.message);
+    }
   }
   return (
     <div className='login-wrapper'>

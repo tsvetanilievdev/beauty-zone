@@ -9,7 +9,6 @@ async function request(url, options) {
 
       if (response.ok == false) { // ако има друга грешка на сървара(не newtork), я хващаме и я прехвърляме на catch
           const error = await response.json();
-          alert(error.message)
           throw new Error(error.message)
       }
 
@@ -20,7 +19,6 @@ async function request(url, options) {
       return await response.json();
 
   } catch (error) { // ако има network грешка директо се catch
-      alert(error.message);
       throw error // (throw)пръхвърляме грешката, за да може този който е извикал request грешката да е стигнала и до него!!!! а не мълчеливо да я хванем и да върнем undefined и приложението да продължи да работи, а да СПРЕ да работи и този който е извикал request да види от къде идва грешката!
   }
 }
