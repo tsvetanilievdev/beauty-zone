@@ -31,7 +31,7 @@ function App() {
 
 
   return (
-    <AuthContext.Provider value={onLogin}>
+    <AuthContext.Provider value={{onLogin}}>
       <div className="App">
         <Header email={user.email} />
         <Routes>
@@ -41,6 +41,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/procedures" exact element={<Procedures />} />
           <Route path="/procedures/:procedureId" element={<ProcedureDetails />} />
+          <Route path="/become-a-member" element={<ProcedureDetails />} />
+          <Route path="/book" element={<ProcedureDetails />} />
         </Routes>
       </div>
     </AuthContext.Provider>
