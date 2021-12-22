@@ -1,3 +1,5 @@
+import { removeUserData } from "../utils/util";
+
 export const settings = {
   host: ''
 }
@@ -10,6 +12,10 @@ async function request(url, options) {
       if (response.ok == false) { // ако има друга грешка на сървара(не newtork), я хващаме и я прехвърляме на catch
           const error = await response.json();
           throw new Error(error.message)
+      }
+      if(response.status == 403) {
+        removeUserData();
+        return;
       }
 
       if(response.status == 204){
@@ -63,9 +69,6 @@ export async function del(url) {
 export async function login(email, password) {
   const result = await post('/users/login', { email, password });
 
-  /* sessionStorage.setItem('email', result.email);
-  sessionStorage.setItem('authToken', result.accessToken);
-  sessionStorage.setItem('id', result._id); */
   return result;
 }
 
@@ -80,11 +83,6 @@ export async function register(email, password) {
 
 export async function logout() {
   const result = await get('/users/logout');
-
-  sessionStorage.removeItem('email');
-  sessionStorage.removeItem('authToken');
-  sessionStorage.removeItem('id');
-  return result;
 }
 
 
