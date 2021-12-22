@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { editUserBooking, getOneById } from '../../services/beautyZoneService';
 import styles from './EditBooking.module.css'
@@ -10,8 +10,11 @@ export const EditBooking = () => {
     const navigate = useNavigate();
     
     //get one buy id, pass to form
-    getOneById(id).then(res => setCurrBooking(res));
+    useEffect(() => {
+        getOneById(id).then(res => setCurrBooking(res));
+    }, [])
     //onSubmit edit 
+    console.log(currBooking)
 
     async function onSubmit(e) {
         e.preventDefault();
@@ -21,7 +24,10 @@ export const EditBooking = () => {
         const name = formData.get('select-procedure');
         const date = formData.get('date');
         const hour = formData.get('timeStart');
-
+        
+        if(date == ''){
+            alert('Please choose DATE')
+        }
         await editUserBooking(id, {type, name, date, hour});
         navigate('/my-bookings');
     }

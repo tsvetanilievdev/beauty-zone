@@ -1,15 +1,27 @@
 import './MyBookingsList.css';
 import { useEffect, useState } from 'react';
-import { getMyBooking } from '../../services/beautyZoneService';
+import { deleteUserBooking, getMyBooking } from '../../services/beautyZoneService';
 import { useContext } from 'react/cjs/react.development';
 import { AuthContext } from '../../contexts/AuthContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 
 const ListItem = (
     { booking,
         i
     }) => {
+    const navigate = useNavigate();
+
+    async function deleteHandler(e){
+        const confirmed = window.confirm('Are you sure?');
+        if(confirmed){
+            await deleteUserBooking(booking._id);
+        }
+        navigate('/booking');
+        
+    }
 
     return (
         <tr>
@@ -19,7 +31,7 @@ const ListItem = (
             <td>{booking.name}</td>
             <td>{booking.type}</td>
             <td><Link to={`/my-bookings/${booking._id}`}>Edit</Link></td>
-            <td><a href="">Delete</a></td>
+            <td><Link onClick={deleteHandler} to="#">Delete</Link></td>
         </tr>
     )
 }
@@ -29,13 +41,13 @@ export const MyBookings = () => {
     const {user} = useContext(AuthContext);
 
     useEffect(() => {
-
         async function getItAll(){
             const myBooks = await getMyBooking(user.id);
             setMyBookings(myBooks.sort((a,b) => new Date(a.date) - new Date(b.date)));
         }
         getItAll()
     }, []);
+
 
     return (
         <>

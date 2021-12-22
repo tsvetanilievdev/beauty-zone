@@ -33,6 +33,10 @@ export async function editUserBooking(id, data){
     return result;
 }
 
+export async function deleteUserBooking(id){
+    const result = await request.del(endpoints.getOneById(id));
+    return result;
+}
 export const login = request.login;
 export const register = request.register;
 export const logout = request.logout;
@@ -45,5 +49,6 @@ export default {
     createUserBooking,
     getMyBooking,
     editUserBooking,
-    getOneById
+    getOneById,
+    deleteUserBooking
 }
