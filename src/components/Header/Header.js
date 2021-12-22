@@ -38,14 +38,20 @@ export const Header = ({
           <li>
             <NavLink to="/procedures">Procedures</NavLink>
           </li>
-          {email 
+          {email
             ? navigationUser
             : navigationGuest}
         </ul>
       </nav>
-      <a className={styles.cta} to="javascript:void(0)">
-        <button>My profile</button>
-      </a>
+      {email
+        ? (<a className={styles.cta} to="javascript:void(0)">
+          <button>My profile</button>
+        </a>)
+        : (<a className={styles.cta} to="/become-a-member">
+        <button>Become a member!</button>
+      </a>)
+      }
+
     </header>
   );
 };
