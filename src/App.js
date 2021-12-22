@@ -43,11 +43,12 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/procedures" exact element={<Procedures />} />
           <Route path="/procedures/:procedureId" element={<ProcedureDetails />} />
+          <Route path="/booking" element={<Booking />} />
 
           {/* // to dooooo.. */}
           <Route path="/logout" element={<Logout />} />
-          <Route path="/booking" element={<Booking />} />
           <Route path="/my-bookings" element={<ProcedureDetails />} />
+          <Route path="/my-bookings/:id" element={<ProcedureDetails />} />
           <Route path="/become-a-member" element={<ProcedureDetails />} />
           <Route path="/contact" element={<ProcedureDetails />} />
         </Routes>
