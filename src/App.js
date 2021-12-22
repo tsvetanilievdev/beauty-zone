@@ -33,7 +33,7 @@ function App() {
   return (
     <AuthContext.Provider value={onLogin}>
       <div className="App">
-        <Header />
+        <Header email={user.email} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
