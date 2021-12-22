@@ -8,6 +8,7 @@ export const Booking = () => {
     const [selectedType, setSelectType] = useState('Body');
     const [selectedProcedures, setSelectProcedures] = useState([]);
     const navigation = useNavigate();
+    
     const todayString = new Date().toISOString().slice(0,10);
     
     useEffect(() => {

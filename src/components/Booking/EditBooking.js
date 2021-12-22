@@ -1,26 +1,29 @@
-import styles from './Booking.module.css'
+import { useParams } from 'react-router-dom';
+import styles from './EditBooking.module.css'
 
-export const editBooking = () => {
+export const EditBooking = () => {
+    const todayString = new Date().toISOString().slice(0,10);
+    const {id} = useParams();
+    
+    //get one buy id, pass to form
+
+    //onSubmit edit 
 
     return (
-        <form onSubmit={onSubmit}  action="">
+        <form  action="">
         <div className={styles.wrapper}>
-            <h3>Edit my booking</h3>
+            <h3>Edit my date or hour</h3>
             <div className={styles['wrap-div'] + " select"}>
                 <label htmlFor="type">Select type: </label>
                 <select name="select-type">
-                    <option value="Body">Body</option>
-                    <option value="Face">Face</option>
-                    <option value="Hair removal">Hair removal</option>
+                    
                 </select>
             </div>
 
             <div className={styles['wrap-div'] + " select"}>
                 <label htmlFor="procedure">Select Procedure: </label>
                 <select name="select-procedure">
-                    {selectedProcedures.length > 0
-                        ? selectedProcedures.map((x,i) => <option key={i} value={x}>{x}</option>)
-                        : null}
+                    
                 </select>
             </div>
             <div className={styles['wrap-div']}>

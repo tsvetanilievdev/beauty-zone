@@ -17,6 +17,7 @@ import { ProcedureDetails } from './components/Procedures/ProcedureDetails.js';
 import { Logout } from './components/Logout/Logout.js';
 import { Booking } from './components/Booking/Booking';
 import { MyBookings } from './components/MyBookings/MyBookingsList';
+import { EditBooking } from './components/Booking/EditBooking';
 
 window.api = requester;
 
@@ -27,14 +28,14 @@ function App() {
     email: "",
     authToken: "",
   })
-  
+
   const onAuth = (data) => {
     let userData = saveUserData(data);
     setUser(userData);
   }
 
   return (
-    <AuthContext.Provider value={{ user, onAuth}}>
+    <AuthContext.Provider value={{ user, onAuth }}>
       <div className="App">
         <Header />
         <Routes>
@@ -48,8 +49,8 @@ function App() {
 
           {/* // to dooooo.. */}
           <Route path="/logout" element={<Logout />} />
-          <Route path="/my-bookings" element={<MyBookings />} />
-          <Route path="/edit/:id" element={<ProcedureDetails />} />
+          <Route path="/my-bookings" element={<MyBookings />}/>
+          <Route path="/my-bookings/:id" element={<EditBooking />} />
           <Route path="/become-a-member" element={<ProcedureDetails />} />
         </Routes>
       </div>

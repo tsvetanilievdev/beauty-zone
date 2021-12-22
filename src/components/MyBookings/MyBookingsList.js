@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { getMyBooking } from '../../services/beautyZoneService';
 import { useContext } from 'react/cjs/react.development';
 import { AuthContext } from '../../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 
 const ListItem = (
@@ -17,7 +18,7 @@ const ListItem = (
             <td>{booking.hour}</td>
             <td>{booking.name}</td>
             <td>{booking.type}</td>
-            <td><a href="">Edit</a></td>
+            <td><Link to={`/my-bookings/${booking._id}`}>Edit</Link></td>
             <td><a href="">Delete</a></td>
         </tr>
     )
