@@ -10,12 +10,12 @@ export function saveUserData(data) {
   }
 }
 
-function removeUserData() {
+export function removeUserData() {
   sessionStorage.removeItem('email');
   sessionStorage.removeItem('authToken');
   sessionStorage.removeItem('id');
 }
-
+/* 
 function isAuthenticated() {
   return Boolean(sessionStorage.getItem('email'));
-}
+} */
