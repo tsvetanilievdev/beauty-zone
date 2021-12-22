@@ -1,10 +1,24 @@
+import { createUserBooking } from '../../services/beautyZoneService';
 import styles from './Booking.module.css'
 
 
 export const Booking = () => {
     const todayString = new Date().toISOString().slice(0,10);
+
+    async function onSubmit(e){
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const type = formData.get('select-type');
+        const name = formData.get('select-procedure');
+        const date = formData.get('date');
+        const hour = formData.get('timeStart');
+
+        const response = await createUserBooking({type, name, date, hour});
+        console.log(response);
+
+    }
     return (
-        <form  action="">
+        <form onSubmit={onSubmit}  action="">
             <div className={styles.wrapper}>
                 <h3>Create booking</h3>
                 <div className={styles['wrap-div'] + " select"}>
@@ -12,7 +26,7 @@ export const Booking = () => {
                     <select name="select-type">
                         <option value="body">Body</option>
                         <option value="face">Face</option>
-                        <option value="hair-remover">Hair remover</option>
+                        <option value="hair-removal">Гair removal</option>
                     </select>
                 </div>
 
@@ -31,7 +45,7 @@ export const Booking = () => {
                 </div>
                 <div className={styles['wrap-div']}>
                     <label htmlFor="timeStart">Choose hour: </label>
-                    <select type="timeStart" name="timeStart">
+                    <select name="timeStart">
                         <option value="8">08:00</option>
                         <option value="9">09:00</option>
                         <option value="10">10:00</option>
@@ -43,10 +57,6 @@ export const Booking = () => {
                         <option value="16">16:00</option>
                         <option value="17">17:00</option>
                     </select>
-                </div>
-                <div className={styles['wrap-div']}>
-                    <label htmlFor="additional">Additional info: </label>
-                    <textarea className={styles.additional} name="additional"></textarea>
                 </div>
                 <button>Submit</button>
             </div>
