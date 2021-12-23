@@ -26,7 +26,7 @@ export const EditBooking = () => {
         const hour = formData.get('timeStart');
         
         if(date == ''){
-            alert('Please choose DATE')
+            return alert('Please choose DATE');
         }
         await editUserBooking(id, {type, name, date, hour});
         navigate('/my-bookings');

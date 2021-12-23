@@ -22,10 +22,7 @@ const navigationUser = (
       <NavLink to="/booking">Book an hour</NavLink>
     </li>
     <li>
-      <NavLink to="#">Contact Us</NavLink>
-    </li>
-    <li>
-      <NavLink to="/logout">Logout</NavLink>
+      <NavLink to="/my-bookings">My Bookings</NavLink>
     </li>
   </>
 
@@ -49,8 +46,9 @@ export const Header = () => {
       {user.email
         ? (
           <ul className={styles['nav__links']}>
+
             <li>
-              <NavLink to="/my-bookings">My Bookings</NavLink>
+              <NavLink to="/logout">Logout</NavLink>
             </li>
           </ul>
         )
