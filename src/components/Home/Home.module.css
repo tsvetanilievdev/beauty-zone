@@ -1,9 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
 .wrap-home {
     text-align: center;
 }
 .beauty-font {
     font-family: Pacifico;
     font-size: 130%;
+}
+.intro {
+    font-size: 1.4rem;
+    position: relative;
+    display: inline-block;
+    max-width: 400px;
+    margin-bottom: 50px;
+}
+.introTo {
+    margin: 50px;
+    position: relative;
+    display: inline-block;
+    max-width: 600px;
+}
+
+
+.crop-image{
+    width: 200px;
+    height: 200px;
+}
+
+.float-right {
+    width: 200px;
+    height: 200px;
 }
