@@ -15,8 +15,6 @@ const DetailsCard = () => {
         getProcedureById(procedureId).then(res =>  setCurrCard(res))
     }, [])
 
-    console.log(currCard)
-
     return (
         <div className="container-details">
             <div className="card-details">

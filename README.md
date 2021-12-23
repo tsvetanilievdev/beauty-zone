@@ -18,7 +18,7 @@ The server is deployed in Heroku.
 
 #### `Users`
 
-email: seskobg,
+email: ceco@abv.bg,
 password: '123456'
 
 

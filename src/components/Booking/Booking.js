@@ -32,7 +32,6 @@ export const Booking = () => {
         const hour = formData.get('timeStart');
 
         const response = await createUserBooking({type, name, date, hour});
-        console.log(response);
         navigation('/my-bookings');
     }
     return (
