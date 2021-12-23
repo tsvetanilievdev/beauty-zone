@@ -28,3 +28,26 @@
   padding: 20px;
   min-height: 250px;
 }
+
+.guest-details {
+  margin-top: 20px;
+  padding: 20px;
+  height: 200px;
+  position: relative;
+  text-align: center  ;
+}
+.vertical-center {
+  position: absolute;
+  left: 30%;
+}
+
+.inside-div {
+  margin: 40px;
+}
+
+.inside-div>a {
+  color: blueviolet;
+}
+.inside-p {
+  margin: 20px;
+}

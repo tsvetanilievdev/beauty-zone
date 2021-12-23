@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { useContext } from "react/cjs/react.development"
 import { AuthContext } from "../../contexts/AuthContext"
 import { getProcedureById } from "../../services/beautyZoneService"
@@ -44,13 +44,15 @@ export const Details = () => {
         <div>
             {user.email
                 ? <DetailsCard />
-                : <div>
-                    <h5>You cannot see details about this procedure</h5>
-                    <a href="/login">Please login</a>
-                    OR
-                    <a href="/register">Please register</a>
-
-                </div>
+                : <div className="guest-details">
+                <   div className="vertical-center">
+                        <h4>You cannot see details about this procedure, you must be a Member!</h4>
+                        <div className="inside-div"></div>
+                        <Link className="a-mar" to="/login">Please login</Link>
+                        <p className="inside-p">OR</p>
+                        <Link className="a-mar" to="/register">Please register</Link>
+                    </div>
+                </div> 
             }
         </div>
     )
