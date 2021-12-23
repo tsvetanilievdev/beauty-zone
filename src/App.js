@@ -24,6 +24,7 @@ window.api = requester;
 
 
 function App() {
+  //managing  here user state
   const [user, setUser] = useState({
     id: "",
     email: "",
