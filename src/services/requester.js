@@ -13,10 +13,7 @@ async function request(url, options) {
           const error = await response.json();
           throw new Error(error.message)
       }
-      if(response.status == 403) {
-        removeUserData();
-        return;
-      }
+    
 
       if(response.status == 204){
         return response;
@@ -75,14 +72,13 @@ export async function login(email, password) {
 export async function register(email, password) {
   const result = await post('/users/register', { email, password });
 
-  sessionStorage.setItem('email', result.email);
-  sessionStorage.setItem('authToken', result.accessToken);
-  sessionStorage.setItem('id', result._id);
+
   return result;
 }
 
 export async function logout() {
-  const result = await get('/users/logout');
+  await get('/users/logout');
+  removeUserData();
 }
 
 

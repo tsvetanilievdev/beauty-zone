@@ -34,9 +34,16 @@ function App() {
     let userData = saveUserData(data);
     setUser(userData);
   }
+  const onLogout = () => {
+    setUser({
+      id: "",
+      email: "",
+      authToken: "",
+    })
+  }
 
   return (
-    <AuthContext.Provider value={{ user, onAuth }}>
+    <AuthContext.Provider value={{ user, onAuth, onLogout }}>
       <div className="App">
         <Header />
         <Routes>
