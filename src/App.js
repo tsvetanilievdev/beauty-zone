@@ -18,6 +18,7 @@ import { Logout } from './components/Logout/Logout.js';
 import { Booking } from './components/Booking/Booking';
 import { MyBookings } from './components/MyBookings/MyBookingsList';
 import { EditBooking } from './components/Booking/EditBooking';
+import { Details } from './components/Details/Details';
 
 window.api = requester;
 
@@ -44,7 +45,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/procedures" exact element={<Procedures />} />
-          <Route path="/procedures/:procedureId" element={<ProcedureDetails />} />
+          <Route path="/procedures/:procedureId" element={<Details />} />
           <Route path="/booking" element={<Booking />} />
 
           {/* // to dooooo.. */}

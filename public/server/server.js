@@ -1339,7 +1339,8 @@
 			'description':'Laser hair removal is the process of hair removal by means of exposure to pulses of laser light that destroy the hair follicle. It had been performed experimentally for about twenty years before becoming commercially available in 1995 and 1996.[1] One of the first published articles describing laser hair removal was authored by the group at Massachusetts General Hospital in 1998',
 			'imageUrl': '/images/laser.jpg',
 			'type': 'Hair removal',
-			'_createdOn': 1617797078108
+			'_id': 'b559bd24-5fb6-4a42-bc48-111111111111',
+            '_createdOn': 1617797078108
 		},
 		'2949b54d-b163-4a00-b65c-222222222222': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1348,7 +1349,8 @@
 			'description':'High-intensity focused ultrasound (HIFU) is a non-invasive therapeutic technique[1] that uses non-ionizing ultrasonic waves to heat or ablate tissue. HIFU can be used to increase the flow of blood or lymph, or to destroy tissue, such as tumors, via thermal and mechanical mechanisms. Given the prevalence and relatively low cost of ultrasound, HIFU has been subject to much research and development. The premise of HIFU is that it is a non-invasive low cost therapy that can at minimum outperform the current standard of care.',
 			'imageUrl': '/images/HIFU.jpg',
 			'type': 'Face',
-			'_createdOn': 1617799443179
+			'_id': '2949b54d-b163-4a00-b65c-222222222222',
+            '_createdOn': 1617799443179
 		},
 		'f6f54fcd-0469-470b-8ffa-333333333333': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1357,7 +1359,8 @@
 			'description': "Waxing is the process of hair removal from the root by using a covering of a sticky substance, such as wax, to adhere to body hair, and then removing this covering and pulling out the hair from the follicle. New hair will not grow back in the previously waxed area for four to six weeks, although some people will start to see regrowth in only a week due to some of their hair being on a different human hair growth cycle. Almost any area of the body can be waxed, including eyebrows, face, pubic hair (called bikini waxing), legs, arms, back, abdomen, knuckles, and feet. There are many types of waxing suitable for removing unwanted hair.",
 			'imageUrl': '/images/kolamaska.jpg',
 			'type': 'Hair removal',
-			'_createdOn': 1617799658349
+			'_id': '35c62d76-8152-4626-8712-eeb96381bea8',
+            '_createdOn': 1617799658349
 		},
 		'0e68a98c-3d56-4d3d-9d9f-444444444444': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1366,7 +1369,8 @@
 			'description':"You don't necessarily have to invest in fancy cleansing brushes to get your skin clean. You may be able to cleanse your skin with just your hands.In a world where everyone seems to be using the latest—and most expensive—skin-cleansing gadget, perhaps you're still a bit of a Luddite. Or maybe you're itching to return to a simpler, cheaper skincare routine by ditching the face cloths and brushes in favour of cleansing with just your hands.There's nothing inherently wrong with using only your hands to wash your face. Some people find that hands work just fine, while others need a tool to get the deeply clean, lightly exfoliated skin they want. Here's how to make the decision.",
 			'imageUrl': '/images/cleaning.jpg',
 			'type': 'Face',
-			'_createdOn': 1617799822338
+			'_id': '0e68a98c-3d56-4d3d-9d9f-444444444444',
+            '_createdOn': 1617799822338
 		},
 		'0e68a98c-3d56-4d3d-9d9f-555555555555': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1375,7 +1379,8 @@
 			'description':'Ultrasound is sound waves with frequencies higher than the upper audible limit of human hearing. Ultrasound is not different from "normal" (audible) sound in its physical properties, except that humans cannot hear it. This limit varies from person to person and is approximately 20 kilohertz (20,000 hertz) in healthy young adults. Ultrasound devices operate with frequencies from 20 kHz up to several gigahertz.',
 			'imageUrl': '/images/ultra.jpg',
 			'type': 'Face',
-			'_createdOn': 1617799822339
+			'_id': '0e68a98c-3d56-4d3d-9d9f-555555555555',
+            '_createdOn': 1617799822339
 		},
 		'0e68a98c-3d56-4d3d-9d9f-666666666666': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1384,7 +1389,8 @@
 			'description':'Mesotherapy is a technique that uses injections of vitamins, enzymes, hormones, and plant extracts to rejuvenate and tighten skin, as well as remove excess fat. Michel Pistor, a doctor in France, developed the technique in 1952. It was originally used to relieve pain.',
 			'imageUrl': '/images/mesotherapy.jpg',
 			'type': 'Face',
-			'_createdOn': 1617799822340
+			'_id': '0e68a98c-3d56-4d3d-9d9f-666666666666',
+            '_createdOn': 1617799822340
 		},
 		'0e68a98c-3d56-4d3d-9d9f-777777777777': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1393,7 +1399,8 @@
 			'description':'LPG endermologie is a well-tolerated and effective method for reducing the diameter of body circumference, however, it is mildly effective in reducing the cellulite grade and so, improving its orange-peel appearance.',
 			'imageUrl': '/images/lpg.jpg',
 			'type': 'Body',
-			'_createdOn': 1617799822341
+			'_id': '0e68a98c-3d56-4d3d-9d9f-777777777777',
+            '_createdOn': 1617799822341
 		},
 		'0e68a98c-3d56-4d3d-9d9f-888888888888': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1402,7 +1409,8 @@
 			'description':'Cryolipolysis, commonly referred to as fat freezing, is a nonsurgical fat reduction procedure that uses cold temperature to reduce fat deposits in certain areas of the body. The procedure is designed to reduce localized fat deposits or bulges that do not respond to diet and exercise.',
 			'imageUrl': '/images/cryolipoliza.jpg',
 			'type': 'Body',
-			'_createdOn': 1617799822342
+			'_id': '0e68a98c-3d56-4d3d-9d9f-888888888888',
+            '_createdOn': 1617799822342
 		},
 		'0e68a98c-3d56-4d3d-9d9f-919191919191': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1411,7 +1419,8 @@
 			'description':"Massage is the manipulation of the body's soft tissues. Massage techniques are commonly applied with hands, fingers, elbows, knees, forearms, feet, or a device. The purpose of massage is generally for the treatment of body stress or pain. A person professionally trained to give massages is traditionally known as a masseur (male) or a masseuse (female) in European countries",
 			'imageUrl': '/images/massage.jpg',
 			'type': 'Body',
-			'_createdOn': 1617799822343
+			'_id': '0e68a98c-3d56-4d3d-9d9f-919191919191',
+            '_createdOn': 1617799822343
 		},
 		'0e68a98c-3d56-4d3d-9d9f-999999999999': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1420,7 +1429,8 @@
 			'description':"Cavitation is a phenomenon in which the static pressure of a liquid reduces to below the liquid's vapour pressure, leading to the formation of small vapor-filled cavities in the liquid. ... This results in surface fatigue of the metal causing a type of wear also called cavitation",
 			'imageUrl': '/images/cavitaciq.jpg',
 			'type': 'Body',
-			'_createdOn': 1617799822344
+			'_id': '0e68a98c-3d56-4d3d-9d9f-999999999999',
+            '_createdOn': 1617799822344
 		},
         '0e68a98c-3d56-4d3d-9d9f-299994499423': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1429,7 +1439,8 @@
 			'description':'Microdermabrasion is a minimally invasive procedure used to renew overall skin tone and texture. It can improve the appearance of sun damage, wrinkles, fine lines, age spots, acne scarring, melasma, and other skin-related concerns and conditions.',
 			'imageUrl': '/images/mikrodermabrazio.jpg',
 			'type': 'Face',
-			'_createdOn': 1617799822345
+			'_id': '0e68a98c-3d56-4d3d-9d9f-299994499423',
+            '_createdOn': 1617799822345
 		},
         '0e68a98c-3d56-4d3d-9d9f-253494444883': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1438,7 +1449,8 @@
 			'description':'Iontophoresis is a process of transdermal drug delivery by use of a voltage gradient on the skin. Molecules are transported across the stratum corneum by electrophoresis and electroosmosis and the electric field can also increase the permeability of the skin.These phenomena, directly and indirectly, constitute active transport of matter due to an applied electric current. The transport is measured in units of chemical flux,',
 			'imageUrl': '/images/ionoforeza.jpg',
 			'type': 'Face',
-			'_createdOn': 1617799822346
+			'_id': '0e68a98c-3d56-4d3d-9d9f-253494444883',
+            '_createdOn': 1617799822346
 		},
         '0e68a98c-3d56-4d3d-9d9f-777774444883': {
 			'_ownerId': '35c62d76-8152-4626-8712-eeb96381bea8',
@@ -1447,7 +1459,8 @@
 			'description':'WISHPro Plus - A technologically advanced facial treatment device and capsule system. Immediate results after the first treatment. You will need only 15 minutes of our patented non-invasive treatment to make your face look younger, refreshed and healthy. Based on Magnetic Infusion Technology (MIT).',
 			'imageUrl': '/images/wishpro.jpg',
 			'type': 'Body',
-			'_createdOn': 1617799822347
+			'_id': '0e68a98c-3d56-4d3d-9d9f-777774444883',
+            '_createdOn': 1617799822347,
 		}
     },
 	clients: {},

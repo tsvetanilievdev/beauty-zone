@@ -3,6 +3,7 @@ import request from './requester.js';
 request.settings.host = 'http://localhost:3030'
 const endpoints = {
     getAllProcedures: '/data/procedures',
+    getOneProcedures: (id) => `/data/procedures/${id}`,
     createBooking: '/data/bookings',
     editBooking: (id) => `/data/bookings/${id}`,
     getOneById: (id) => `/data/bookings/${id}`,
@@ -12,6 +13,10 @@ const endpoints = {
 export async function getAll(){
     const result = await request.get(endpoints.getAllProcedures);
     return Object.values(result);
+}
+export async function getProcedureById(id){
+    const result = await request.get(endpoints.getOneProcedures(id));
+    return result;
 }
 
 export async function getOneById(id){
@@ -50,5 +55,6 @@ export default {
     getMyBooking,
     editUserBooking,
     getOneById,
-    deleteUserBooking
+    deleteUserBooking,
+    getProcedureById
 }

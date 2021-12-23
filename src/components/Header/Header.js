@@ -57,7 +57,7 @@ export const Header = () => {
         : (
           <ul className={styles['nav__links']}>
             <li>
-              <NavLink to="/become-a-member">Become a member!</NavLink>
+              <NavLink to="#"></NavLink>
             </li>
           </ul>)
       }
