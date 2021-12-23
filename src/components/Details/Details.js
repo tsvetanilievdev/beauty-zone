@@ -10,7 +10,6 @@ const DetailsCard = () => {
     const [currCard, setCurrCard] = useState({});
     const {procedureId} = useParams();
 
-
     useEffect(() => {
         getProcedureById(procedureId).then(res =>  setCurrCard(res))
     }, [])

@@ -11,7 +11,6 @@ import { Login } from './components/Login/Login.js';
 import { Register } from './components/Register/Register.js';
 import { Home } from './components/Home/Home.js';
 import { Procedures } from './components/Procedures/Procedures.js';
-import { ProcedureDetails } from './components/Procedures/ProcedureDetails.js';
 import { Logout } from './components/Logout/Logout.js';
 import { Booking } from './components/Booking/Booking';
 import { MyBookings } from './components/MyBookings/MyBookingsList';
