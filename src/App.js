@@ -50,12 +50,10 @@ function App() {
           <Route path="/procedures" exact element={<Procedures />} />
           <Route path="/procedures/:procedureId" element={<Details />} />
           <Route path="/booking" element={<Booking />} />
-
-          {/* // to dooooo.. */}
           <Route path="/logout" element={<Logout />} />
           <Route path="/my-bookings" element={<MyBookings />}/>
           <Route path="/my-bookings/:id" element={<EditBooking />} />
-          <Route path="/become-a-member" element={<ProcedureDetails />} />
+
         </Routes>
       </div>
     </AuthContext.Provider>
