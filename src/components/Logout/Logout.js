@@ -16,6 +16,6 @@ export const Logout = () => {
 
     return(
         <h3>Logging out....</h3>
-    )
+    )   
 
 }
