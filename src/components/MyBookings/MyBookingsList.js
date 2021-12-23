@@ -1,7 +1,7 @@
 import './MyBookingsList.css';
 import { useEffect, useState } from 'react';
 import { deleteUserBooking, getMyBooking } from '../../services/beautyZoneService';
-import { useContext } from 'react/cjs/react.development';
+import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 

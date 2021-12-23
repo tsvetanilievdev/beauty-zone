@@ -1,5 +1,5 @@
 import './ProcedureCard.css';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export const ProcedureCard = ({ procedure }) => {

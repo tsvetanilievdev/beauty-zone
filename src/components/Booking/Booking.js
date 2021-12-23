@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { createUserBooking, getAll } from '../../services/beautyZoneService';
+import { createUserBooking, getAll } from '../../services/beautyZoneService.js';
 import styles from './Booking.module.css'
 
 

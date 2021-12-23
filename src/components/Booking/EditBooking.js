@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { editUserBooking, getOneById } from '../../services/beautyZoneService';
+import { editUserBooking, getOneById } from '../../services/beautyZoneService.js';
 import styles from './EditBooking.module.css'
 
 export const EditBooking = () => {

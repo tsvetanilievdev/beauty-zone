@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import { useContext } from "react/cjs/react.development"
+import { useContext } from "react"
 import { AuthContext } from "../../contexts/AuthContext"
 import { getProcedureById } from "../../services/beautyZoneService"
 import './Details.css'

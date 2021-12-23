@@ -1,6 +1,6 @@
 import request from './requester.js';
 
-request.settings.host = 'http://softuni-beauty-zone.herokuapp.com'
+request.settings.host = 'https://softuni-beauty-zone.herokuapp.com'
 const endpoints = {
     getAllProcedures: '/data/procedures',
     getOneProcedures: (id) => `/data/procedures/${id}`,

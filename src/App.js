@@ -1,7 +1,5 @@
 import './App.css';
 
-import requester from './services/beautyZoneService';
-
 import { Route, Routes } from 'react-router';
 import { AuthContext } from './contexts/AuthContext.js'
 import { useState } from 'react';
@@ -19,9 +17,6 @@ import { Booking } from './components/Booking/Booking';
 import { MyBookings } from './components/MyBookings/MyBookingsList';
 import { EditBooking } from './components/Booking/EditBooking';
 import { Details } from './components/Details/Details';
-
-window.api = requester;
-
 
 function App() {
   //managing  here user state
