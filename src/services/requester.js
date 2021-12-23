@@ -4,7 +4,6 @@ export const settings = {
   host: ''
 }
 
-// универсална request функция за заявиките
 async function request(url, options) {
   try {
       const response = await fetch(url, options)
@@ -77,7 +76,13 @@ export async function register(email, password) {
 }
 
 export async function logout() {
-  await get('/users/logout');
+  const token = sessionStorage.getItem('authToken')
+  await fetch('/users/logout', {
+    method: 'GET',
+    headers: {
+      ['X-Authorization']: token
+    }
+  });
   removeUserData();
 }
 
