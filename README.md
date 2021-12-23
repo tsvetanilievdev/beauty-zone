@@ -22,5 +22,5 @@ email: ceco@abv.bg,
 password: '123456'
 
 
-### `Additional info`
-## React Card Component - https://www.youtube.com/watch?v=Q3I_NwaCZI8
+#### `Additional info`
+- React Card Component - https://www.youtube.com/watch?v=Q3I_NwaCZI8
