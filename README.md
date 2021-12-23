@@ -6,8 +6,10 @@ The React App is about Beauty Saloon.
 ## Features
 - There is authentication - login, register, logout;
 - Book an hour - CRUD operations - create, edit and delete;
-- Private content for users - Users booking,
-- More detailed information for procedures for users.
+- Private content for users :
+    - Users booking,
+    - More detailed information for procedures for users.
+- Seaching of procedures
 
 ### `Live demo`
 
